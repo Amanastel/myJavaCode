@@ -52,18 +52,20 @@ public class CollectionFramework {
          */
 
 
-        /*
-        Stack<String> name = new  Stack<>();
-        name.add("aman");
-        name.add("astel");
-        name.add("love");
-        System.out.println(name);
-        name.push("astell");
-        System.out.println(name);
-        name.pop();
-        System.out.println(name);
+    /*
+        Stack<String> name1 = new  Stack<>();
+        name1.add("aman");
+        name1.add("astel");
+        name1.add("love");
+        System.out.println(name1);
+        name1.push("astell");
+        System.out.println(name1);
+        name1.pop();
+        System.out.println(name1);
 
-         */
+     */
+
+
 
         ArrayDeque<String> name = new ArrayDeque<>();
         name.push("aman");
