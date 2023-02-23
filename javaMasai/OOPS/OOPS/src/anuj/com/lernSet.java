@@ -26,8 +26,17 @@ public class lernSet {
         System.out.println(set);
         System.out.println(set.contains(80));  //set.contains() check if value are there then return ture else false
         System.out.println(set.isEmpty());*/
-
-
+        Set<Integer> set = new TreeSet<>(); // element are sorted and order are same
+        set.add(1);
+        set.add(20);
+        set.add(90);
+        set.add(80);
+        set.add(50);
+        set.add(80); // do not add same value
+        set.add(80); // do not add same value
+        set.add(80); // do not add same value
+        System.out.println(set);
+//        System.out.println(set.contains("3"));
         Set<Student> studentSet = new HashSet<>();
         studentSet.add(new Student("aman",2));
         studentSet.add(new Student("rahul",3));

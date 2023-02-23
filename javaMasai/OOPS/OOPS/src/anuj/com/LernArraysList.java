@@ -33,6 +33,7 @@ public class LernArraysList {
         list.add(60);
         list.add(70);
         list.add(80);
+        list.add(80);
         System.out.println(list+" --- "+list.size());
         System.out.println(list.get(2));
         list.remove(2);

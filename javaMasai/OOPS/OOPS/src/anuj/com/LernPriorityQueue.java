@@ -3,6 +3,7 @@ package anuj.com;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+
 public class LernPriorityQueue {
     public static void main(String[] args) {
 
@@ -28,6 +29,7 @@ public class LernPriorityQueue {
         pq.offer(42);
         pq.offer(62);
         pq.offer(32);
+        pq.offer(22);
         pq.offer(22);
         pq.offer(52);
 
