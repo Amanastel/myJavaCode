@@ -19,5 +19,6 @@ public class LernStack {
         animal.pop();
         System.out.println(animal.peek());
         System.out.println(animal);
+        System.out.println(animal.size());
     }
 }

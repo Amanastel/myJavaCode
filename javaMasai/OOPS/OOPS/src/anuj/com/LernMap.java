@@ -54,7 +54,7 @@ public class LernMap {
 
         for(int i=0; i< str.length; i++){
             if(name.containsKey(str[i])){
-                name.put(str[i],name.get(str[i])+1);
+//                name.put(str[i],name.get(str[i])+1);
             }else{
                 name.put(str[i],1);
             }
