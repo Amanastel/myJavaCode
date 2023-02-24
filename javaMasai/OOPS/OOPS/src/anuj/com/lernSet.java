@@ -20,7 +20,7 @@ public class lernSet {
         set.add(80); // do not add same value
         set.add(80); // do not add same value
         set.add(80); // do not add same value
-
+        System.out.println(set);
         System.out.println(set);
         set.remove(50);
         System.out.println(set);
@@ -28,6 +28,7 @@ public class lernSet {
         System.out.println(set.isEmpty());*/
         Set<Integer> set = new TreeSet<>(); // element are sorted and order are same
         set.add(1);
+        set.add(20);
         set.add(20);
         set.add(90);
         set.add(80);
