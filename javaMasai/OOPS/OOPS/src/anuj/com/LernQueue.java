@@ -12,6 +12,8 @@ public class LernQueue {
         queue.offer(32);
         queue.offer(42);
         queue.offer(52);
+        queue.offer(92);
+        queue.offer(62);
 
 
         System.out.println(queue);
