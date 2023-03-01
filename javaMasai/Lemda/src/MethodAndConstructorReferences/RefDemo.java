@@ -10,6 +10,6 @@ public class RefDemo {
 //            System.out.println("this is do task new method ");
 //        };
         WorkInter workInter = Stuff::doSuff;
-        workInter.doTask();
+        workInter.doTask();  // this line of code refer the all code where i write doStuff static
     }
 }
