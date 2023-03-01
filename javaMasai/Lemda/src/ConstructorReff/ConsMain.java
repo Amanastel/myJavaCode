@@ -7,6 +7,9 @@ public class ConsMain {
 //        Provider provider=()-> {
 //            return new Student();
 //        };
+
+        //constructor reference
+        //className::new
         Provider provider = Student::new;
 
         Student student = provider.getStudent();
