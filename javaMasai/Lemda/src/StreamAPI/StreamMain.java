@@ -23,6 +23,16 @@ public class StreamMain {
         list2.add(12);
 
         List<Integer> list3 = Arrays.asList(23,567,12,677,24);
-        System.out.println(list2);
+
+        List<Integer> listEven = new ArrayList<>();
+
+        System.out.println(listEven);
+        for(Integer i: list1){
+            if(i%2==0){
+                listEven.add(i);
+            }
+        }
+        System.out.println(list1);
+        System.out.println(listEven);
     }
 }
