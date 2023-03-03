@@ -69,9 +69,10 @@ public class StreamMain {
         List<Integer> listLength = nameList.stream().filter(name -> name.length()>3).map(fn).toList();
         listLength.forEach(i -> System.out.print (i + " "));
 
-        
+
         System.out.println();
         nameList.stream().sorted().forEach(i -> System.out.println(i));
+        System.out.println();
 
     }
 }
