@@ -74,5 +74,8 @@ public class StreamMain {
         nameList.stream().sorted().forEach(i -> System.out.println(i));
         System.out.println();
 
+
+
+
     }
 }
