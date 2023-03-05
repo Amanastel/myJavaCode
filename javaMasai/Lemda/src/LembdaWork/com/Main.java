@@ -45,5 +45,9 @@ public class Main {
         LengthInter lengthInter= str -> str.length();
         System.out.println(lengthInter.getLength("aman"));
 
+        for(int n=0; n<7; n++){
+            System.out.println(n);
+        }
+
     }
 }
