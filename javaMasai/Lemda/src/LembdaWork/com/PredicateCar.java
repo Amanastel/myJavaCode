@@ -15,6 +15,18 @@ public class PredicateCar {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     public String getColor() {
         return color;
     }
