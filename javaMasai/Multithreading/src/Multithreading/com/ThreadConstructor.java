@@ -6,6 +6,7 @@ class MyThr extends Thread{
         super(name);
     }
 
+    @Override
     public void run(){
         int i = 34;
         System.out.println("Thank you");
