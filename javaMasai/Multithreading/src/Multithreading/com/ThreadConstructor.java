@@ -23,9 +23,13 @@ public class ThreadConstructor {
         thr.start();
         thr2.start();
         System.out.println("the id is the thread " + thr.getId());
+        System.out.println("the id is the thread " + thr.getId());
+        System.out.println("the id is the thread " + thr.getName());
         System.out.println("the id is the thread " + thr.getName());
 
         System.out.println("the id is the thread " + thr2.getId());
+        System.out.println("the id is the thread " + thr2.getId());
+        System.out.println("the id is the thread " + thr2.getName());
         System.out.println("the id is the thread " + thr2.getName());
     }
 }
