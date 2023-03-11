@@ -21,7 +21,6 @@ class MyThread2 extends Thread{
         while (i<10000){
             System.out.println("Thread 2 is Running");
             System.out.println("I am Good!");
-            System.out.println("I am Good!");
             i++;
         }
 
