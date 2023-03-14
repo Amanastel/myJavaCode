@@ -4,72 +4,18 @@ package Multithreading.com;
 class MyThreadRunnable implements Runnable{
     @Override
     public void run() {
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-        System.out.println("I am a Thread 1 not a thread1");
-
+        for(int i=0; i<20; i++){
+            System.out.println("I am a Thread 1 not a thread1");
+        }
     }
 }
 
 class MyThreadRunnable2 implements Runnable{
     @Override
     public void run() {
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
-        System.out.println("I am a Thread 2 not a thread2");
+        for(int i=0; i<20; i++){
+            System.out.println("I am a Thread 2 not a thread2");
+        }
     }
 }
 public class RunnableDemo02 {
