@@ -31,6 +31,7 @@ public class InBuildExamples {
 //        System.out.println(queue.remove());
 //        System.out.println(queue.remove());
 //        System.out.println(queue.remove());
+//        System.out.println(queue);
 
 
         Deque<Integer> deque = new ArrayDeque<>();
@@ -39,6 +40,5 @@ public class InBuildExamples {
         deque.add(8);
         System.out.println(deque);
         deque.addLast(26);
-        System.out.println(deque);
     }
 }
