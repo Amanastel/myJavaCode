@@ -39,6 +39,6 @@ public class InBuildExamples {
         deque.add(8);
         System.out.println(deque);
         deque.addLast(26);
-
+        System.out.println(deque);
     }
 }
