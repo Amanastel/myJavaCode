@@ -25,8 +25,6 @@ public class InBuildExamples {
 //        queue.add(5);
 //        queue.add(19);
 //        queue.add(1);
-//        queue.add(1);
-//        queue.add(1);
 //
 //        System.out.println(queue.remove());
 //        System.out.println(queue.remove());
