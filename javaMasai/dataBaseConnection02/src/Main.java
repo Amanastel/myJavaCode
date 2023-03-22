@@ -127,7 +127,6 @@ public class Main {
                 System.out.println("Roll Number: " + rs.getString(1) + " Name: " + rs.getString(2) + " CGPA: " + rs.getDouble(3) + " Date of birth " + rs.getDate(4));
             }
         }
-
         closeConnection(conn);
     }
 

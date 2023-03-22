@@ -2,6 +2,7 @@ import java.sql.*;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
+        System.out.println("hello user: ");
         String url = "jdbc:mysql://localhost:3306/Problem01";
         String name = "root";
         String pass = "aman1234";
