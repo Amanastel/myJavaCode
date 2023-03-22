@@ -91,9 +91,9 @@ public class Employee_CUED_operation {
             ps.setDate(3, Date.valueOf(joiningDate));
             ps.setString(4, eid);
             if(ps.executeUpdate()>0){
-                System.out.println("Employee added successfully ");
+                System.out.println("Employee update successfully ");
             }else {
-                System.out.println("Unable to add employee " );
+                System.out.println("Unable to update employee " );
             }
 
         }catch (ClassNotFoundException | SQLException ex){
@@ -110,34 +110,143 @@ public class Employee_CUED_operation {
 
     }
 
+    static void deleteEmployee(Scanner sc){
+        Connection conn = null;
+        try {
+            conn = getConnectionToDatabase();
+            String query = "DELETE FROM employee WHERE eid = ?";
 
+            PreparedStatement ps = conn.prepareStatement(query);
+//            System.out.println(ps);
+            System.out.print("enter employee id ");
+            String eid = sc.next();
+
+            ps.setString(1, eid);
+            if(ps.executeUpdate()>0){
+                System.out.println("Employee Deleted successfully ");
+            }else {
+                System.out.println("Unable to Delete employee " );
+            }
+
+        }catch (ClassNotFoundException | SQLException ex){
+            System.out.println(ex);
+        }finally {
+            if(conn != null){
+                try {
+                    closeConnection(conn);
+                }catch (SQLException ex){
+
+                }
+            }
+        }
+
+    }
+    static void viewEmployee(){
+        Connection conn = null;
+        try {
+            conn = getConnectionToDatabase();
+            String query = "SELECT eid, name, salary, joining_date FROM employee";
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            ResultSet rs = ps.executeQuery();
+            if(!rs.isBeforeFirst() && rs.getRow() == 0){
+                System.out.println("No Employee found");
+            }else {
+                while (rs.next()){
+                    System.out.print(" Employee ID : "+ rs.getString(1));
+                    System.out.print(" Employee name : "+ rs.getString(2));
+                    System.out.print(" Employee salary : "+ rs.getDouble(3));
+                    System.out.print(" Employee Joining Date : "+ rs.getDate(4));
+                    System.out.println();
+                }
+            }
+
+        }catch (ClassNotFoundException | SQLException ex){
+            System.out.println(ex);
+        }finally {
+            if(conn != null){
+                try {
+                    closeConnection(conn);
+                }catch (SQLException ex){
+
+                }
+            }
+        }
+
+    }
+
+    static void searchEmployeeByJoiningDateRange(Scanner sc){
+        Connection conn = null;
+        try {
+            conn = getConnectionToDatabase();
+            String query = "SELECT eid, name, salary, joining_date FROM employee WHERE joining_date BETWEEN ? AND ?";
+
+
+            PreparedStatement ps = conn.prepareStatement(query);
+
+            System.out.println("Please enter start date");
+            Date startDate = Date.valueOf(LocalDate.parse(sc.next()));
+
+            System.out.println("Please enter end date");
+            Date endDate = Date.valueOf(LocalDate.parse(sc.next()));
+
+
+            ps.setDate(1 , startDate);
+            ps.setDate(2 , endDate);
+            ResultSet rs = ps.executeQuery();
+            if(!rs.isBeforeFirst() && rs.getRow() == 0){
+                System.out.println("No Employee found");
+            }else {
+                while (rs.next()){
+                    System.out.print(" Employee ID : "+ rs.getString(1));
+                    System.out.print(" Employee name : "+ rs.getString(2));
+                    System.out.print(" Employee salary : "+ rs.getDouble(3));
+                    System.out.print(" Employee Joining Date : "+ rs.getDate(4));
+                    System.out.println();
+                }
+            }
+
+        }catch (ClassNotFoundException | SQLException ex){
+            System.out.println(ex);
+        }finally {
+            if(conn != null){
+                try {
+                    closeConnection(conn);
+                }catch (SQLException ex){
+
+                }
+            }
+        }
+    }
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
        Scanner sc = new Scanner(System.in);
        int choice = 0;
        do {
            System.out.println("1. Add Employee ");
            System.out.println("2. View Employee ");
-           System.out.println("2. Update Employee ");
-           System.out.println("3. Delete Employee ");
+           System.out.println("3. Update Employee ");
+           System.out.println("4. Delete Employee ");
            System.out.println("5. Search Employee By Joining Date Range ");
+           System.out.println("0. Exit");
            System.out.print("Enter selection ");
            choice = sc.nextInt();
 
            switch(choice) {
                case 1:
                    addEmployee(sc);
-                  // Add employee method
                    break;
                case 2:
-                  // view Employee method
+                   viewEmployee();
                    break;
                case 3:
-                  // Update Employee method
+                   updateEmployee(sc);
                    break;
                case 4:
-                   // Delete Employee method
+                   deleteEmployee(sc);
                    break;
                case 5:
+                   searchEmployeeByJoiningDateRange(sc);
                    // Search Employee By Joining Date Range method
                    break;
                case 0:
