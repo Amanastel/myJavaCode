@@ -7,7 +7,6 @@ import com.employee.dto.Employee;
 import com.employee.dto.EmployeeImpl;
 import com.employee.exception.NoRecordFoundException;
 import com.employee.exception.SomethingWentWrongException;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -151,3 +150,4 @@ public class UI_Main {
         sc.close();
     }
 }
+
