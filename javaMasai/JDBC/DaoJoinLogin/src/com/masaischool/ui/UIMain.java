@@ -3,7 +3,6 @@ package com.masaischool.ui;
 import java.util.Scanner;
 
 public class UIMain {
-
     static void displayAdminMenu() {
         System.out.println("0. Log out Admin");
         System.out.println("1. Add new Category");
@@ -28,7 +27,7 @@ public class UIMain {
                     CategoryUI.addCategoryUI(sc);
                     break;
                 case 2:
-//                    ProductUI.viewProductsByCategoryId(sc);
+                    ProductUI.viewProductsByCategoryId(sc);
                     break;
                 case 3:
                     //productUI.addProduct();
@@ -50,6 +49,7 @@ public class UIMain {
             }
         }while(choice != 0);
     }
+
     static void adminLogin(Scanner sc) {
         System.out.print("Enter username ");
         String username = sc.next();
@@ -62,33 +62,77 @@ public class UIMain {
             System.out.println("Invalid Username and Password");
         }
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    static void displayUserMenu() {
+        System.out.println("1. View All Products");
+        System.out.println("2. Purchase a Product");
+        System.out.println("3. View Order History");
+        System.out.println("4. Update My Name");
+        System.out.println("5. Update My Password");
+        System.out.println("6. Delete My Account");
+        System.out.println("0. Logout");
+    }
+
+    static void userLogin(Scanner sc) {
+        if(!UserUI.login(sc))
+            return;
+
+        //you are here means login is successful
         int choice = 0;
         do {
-            System.out.println("1. Admin Login ");
-            System.out.println("2. User Login ");
-            System.out.println("3. User Sign up");
-            System.out.println("0. Exit");
+            displayUserMenu();
             System.out.print("Enter selection ");
             choice = sc.nextInt();
             switch(choice) {
                 case 1:
-//                    AdminLogin(sc);
+                    //productUI.viewAllProducts();
                     break;
                 case 2:
-//                    CustomerLogin();
+                    OrderUI.purchase(sc);
                     break;
                 case 3:
-//                    UserUI.signup(sc);
+                    //orderUI.viewOrderDetails();
                     break;
+                case 4:
+                    //userUI.updateNameOfUser();
+                    break;
+                case 5:
+                    //userUI.changePassword();
+                    break;
+                case 6:
+                    //userUI.deleteUser();
                 case 0:
-                    System.out.println("Thanks for using our services");
+                    UserUI.logout();
                     break;
                 default:
-                    System.out.println("Invalid Selection, try again later");
+                    System.out.println("Invalid Selection, try again");
             }
-        }while (choice !=0);
+        }while(choice != 0);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //user CategoryUI, ProductUI, OrderUI and UserUI class here
+        int choice = 0;
+        do {
+            System.out.println("1. Admin Login\n2. User Login\n3. User Sign Up\n0. Exit");
+            choice = sc.nextInt();
+            switch(choice) {
+                case 0:
+                    System.out.println("Thank you, Visit again");
+                    break;
+                case 1:
+                    adminLogin(sc);
+                    break;
+                case 2:
+                    userLogin(sc);
+                    break;
+                case 3:
+                    //userUI.signup(sc);
+                    break;
+                default:
+                    System.out.println("Invalid Selection, try again");
+            }
+        }while(choice != 0);
         sc.close();
     }
 }

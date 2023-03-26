@@ -17,7 +17,7 @@ public class DBUtils {
         //step-1: load the Driver class
         Class.forName("com.mysql.cj.jdbc.Driver");
         //step-2
-        ResourceBundle rb = ResourceBundle.getBundle("dbdetails");
+        ResourceBundle rb = ResourceBundle.getBundle("db");
         return DriverManager.getConnection(rb.getString("url"), rb.getString("username"), rb.getString("password"));
     }
 
