@@ -29,6 +29,7 @@ public class UserDAOImpl implements UserDAO {
                 throw new NoRecordFoundException("Invalid username or password");
             }
 
+
             rs.next();
             LoggedInUser.loggedInUserId = rs.getInt(1);
         }catch(ClassNotFoundException | SQLException ex) {
@@ -41,6 +42,7 @@ public class UserDAOImpl implements UserDAO {
             }
         }
     }
+
 
     @Override
     public void logout() {

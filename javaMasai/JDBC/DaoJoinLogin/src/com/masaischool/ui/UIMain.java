@@ -127,7 +127,7 @@ public class UIMain {
                     userLogin(sc);
                     break;
                 case 3:
-                    //userUI.signup(sc);
+//                    userUI.signup(sc);
                     break;
                 default:
                     System.out.println("Invalid Selection, try again");
