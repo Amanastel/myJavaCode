@@ -24,7 +24,7 @@ public class CategoryUI {
             System.out.println("Category added successfully");
         }catch(SomethingWentWrongException ex) {
             System.out.println(ex);
-            System.out.println(ex);
+
         }
     }
 
