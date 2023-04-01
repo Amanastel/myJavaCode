@@ -34,7 +34,7 @@ public class UIMain {
 					//productUI.addProduct();
 					break;
 				case 4:
-					//userUI.viewAllUsers();
+					
 					break;
 				case 5:
 					//orderUI.viewAllOrders();
