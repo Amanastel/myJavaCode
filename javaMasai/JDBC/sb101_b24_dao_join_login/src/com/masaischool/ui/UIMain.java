@@ -31,7 +31,7 @@ public class UIMain {
 					ProductUI.viewProductsByCategoryId(sc);
 					break;
 				case 3:
-					//productUI.addProduct();
+					
 					break;
 				case 4:
 					//userUI.viewAllUsers();
