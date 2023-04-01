@@ -11,6 +11,7 @@ public class UIMain {
 		System.out.println("4. View All Products");
 		System.out.println("5. View all Users");
 		System.out.println("6. View all Orders");
+		// System.out.println("6. View all Orders");
 	}
 	
 	static void adminMenu(Scanner sc) {
