@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EmployeeDataSystem/EmployeeDataSystem.iml" filepath="$PROJECT_DIR$/EmployeeDataSystem/EmployeeDataSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JDBC.iml" filepath="$PROJECT_DIR$/.idea/JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JdbcConnection/JdbcConnection.iml" filepath="$PROJECT_DIR$/JdbcConnection/JdbcConnection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataBaseConnection02/dataBaseConnection02.iml" filepath="$PROJECT_DIR$/dataBaseConnection02/dataBaseConnection02.iml" />
+    </modules>
+  </component>
+</project>
