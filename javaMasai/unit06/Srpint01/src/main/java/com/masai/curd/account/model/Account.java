@@ -49,7 +49,7 @@ public class Account {
     @Override
     public String toString() {
         return "Account{" +
-                "accno=" + accno +
+                "Account Number=" + accno +
                 ", name='" + name + '\'' +
                 ", balance=" + balance +
                 '}';

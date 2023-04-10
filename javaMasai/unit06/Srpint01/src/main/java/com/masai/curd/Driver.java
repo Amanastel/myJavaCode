@@ -2,6 +2,7 @@ package com.masai.curd;
 
 import com.masai.curd.account.dao.AccountDao;
 import com.masai.curd.account.dao.impl.AccountDaoImpl;
+import com.masai.curd.account.model.Account;
 
 import java.util.Scanner;
 
@@ -19,14 +20,14 @@ public class Driver {
         ac.setBalance(100);
        dao.createAccount(ac);
 */
-       /* Account account = dao.findAccount(inp);
-        System.out.println(account.toString());*/
+        Account account = dao.findAccount(inp);
+        System.out.println(account.toString());
 
       /*  account.setBalance(500);
         dao.updateAccount(account);*/
 
 
-        dao.deleteAccount(inp);
+//        dao.deleteAccount(inp);
 
     }
 }
