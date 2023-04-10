@@ -1,11 +1,9 @@
 package com.masai.curd.account.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@NamedQuery(name = "find account by id", query = "Select e from Account e where e.accno = :number")
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
