@@ -12,20 +12,31 @@ public class hasADriver {
         EntityManager em = entityManagerFactory.createEntityManager();
 
 
-       /* Students students = new Students();
+        Students students = new Students();
         students.setName("aman");
         students.setMarks(99);
 
-        Address address = new Address("kanpur","UP","210301");
-        students.setAddress(address);
+//        Address homeAddress = new Address("Hamirpur","UP","210301","home");
+//        students.getAddressSet().add(homeAddress);
+//
+//        Address officeAddress = new Address("Bangalore","KN","530068","office");
+//        students.getAddressSet().add(officeAddress);
+
+
+        Address homeAddress = new Address("Hamirpur","UP","210301","home");
+        Address officeAddress = new Address("Bangalore","KN","530068","office");
+
+        students.getAddressSet().add(officeAddress);
+        students.getAddressSet().add(homeAddress);
 
         em.getTransaction().begin();
         em.persist(students);
 
         em.getTransaction().commit();
-        em.close();*/
+        em.close();
 
-        Students students = em.find(Students.class,1);
-        System.out.println(students.toString());
+//        Students student = em.find(Students.class,1);
+//        System.out.println(student.toString());
+//        em.close();
     }
 }

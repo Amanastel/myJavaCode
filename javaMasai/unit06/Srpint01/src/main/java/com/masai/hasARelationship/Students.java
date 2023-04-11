@@ -1,6 +1,8 @@
 package com.masai.hasARelationship;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Students {
@@ -11,14 +13,40 @@ public class Students {
     private int marks;
 
     @Embedded
-    private Address address;
+    @ElementCollection
+    private Set<Address> addressSet = new HashSet<>();
+
+//    @Embedded
+//    @AttributeOverrides({
+//            @AttributeOverride(name = "city", column = @Column(name = "Home_city")),
+//            @AttributeOverride(name = "state", column = @Column(name = "Home_state")),
+//            @AttributeOverride(name = "pinCode", column = @Column(name = "Home_pinCode"))
+//    })
+//    private Address homeAddress;
+//
+//    @Embedded
+//    @AttributeOverrides({
+//            @AttributeOverride(name = "city", column = @Column(name = "office_city")),
+//            @AttributeOverride(name = "state", column = @Column(name = "office_state")),
+//            @AttributeOverride(name = "pinCode", column = @Column(name = "office_pinCode"))
+//    })
+//    private Address officeAddress;
+
+//    public Students(int sid, String name, int marks, Set<Address> addressSet, Address homeAddress, Address officeAddress) {
+//        this.sid = sid;
+//        this.name = name;
+//        this.marks = marks;
+//        this.addressSet = addressSet;
+//        this.homeAddress = homeAddress;
+//        this.officeAddress = officeAddress;
+//    }
 
 
-    public Students(int sid, String name, int marks, Address address) {
+    public Students(int sid, String name, int marks, Set<Address> addressSet) {
         this.sid = sid;
         this.name = name;
         this.marks = marks;
-        this.address = address;
+        this.addressSet = addressSet;
     }
 
     public Students() {
@@ -40,14 +68,6 @@ public class Students {
         this.name = name;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
     public int getMarks() {
         return marks;
     }
@@ -56,13 +76,38 @@ public class Students {
         this.marks = marks;
     }
 
+    public Set<Address> getAddressSet() {
+        return addressSet;
+    }
+
+    public void setAddressSet(Set<Address> addressSet) {
+        this.addressSet = addressSet;
+    }
+
+//    public Address getHomeAddress() {
+//        return homeAddress;
+//    }
+//
+//    public void setHomeAddress(Address homeAddress) {
+//        this.homeAddress = homeAddress;
+//    }
+//
+//    public Address getOfficeAddress() {
+//        return officeAddress;
+//    }
+//
+//    public void setOfficeAddress(Address officeAddress) {
+//        this.officeAddress = officeAddress;
+//    }
+
+
     @Override
     public String toString() {
         return "Students{" +
                 "sid=" + sid +
                 ", name='" + name + '\'' +
                 ", marks=" + marks +
-                ", address=" + address +
+                ", addressSet=" + addressSet +
                 '}';
     }
 }
