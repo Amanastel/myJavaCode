@@ -13,7 +13,7 @@ public class Students {
     private int marks;
 
     @Embedded
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private Set<Address> addressSet = new HashSet<>();
 
 //    @Embedded
