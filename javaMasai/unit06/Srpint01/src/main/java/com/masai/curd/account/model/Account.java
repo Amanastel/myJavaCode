@@ -3,7 +3,11 @@ package com.masai.curd.account.model;
 import javax.persistence.*;
 
 @Entity
-@NamedQuery(name = "find account by id", query = "Select e from Account e where e.accno = :number")
+@NamedQuery(name = "find account by id", query = "Select e.name, e.balance from Account e where e.accno = :number")
+//@NamedQuery(name = "find account by id",
+//            query = "Select NEW com.masai.curd.account.model.Account(e.name, e.balance) from Account e where e.accno = :number")
+
+@NamedNativeQuery(name = "find account by name", query = "Select * from Account where name = :name",resultClass = Account.class)
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,6 +17,11 @@ public class Account {
 
     public Account(int accno, String name, int balance) {
         this.accno = accno;
+        this.name = name;
+        this.balance = balance;
+    }
+
+    public Account(String name, int balance) {
         this.name = name;
         this.balance = balance;
     }

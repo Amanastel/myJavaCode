@@ -14,25 +14,27 @@ import java.util.Scanner;
 public class Driver {
     public static void main(String[] args) {
 
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("enter the account number: ");
-//        int inp = sc.nextInt();
-//
-//        AccountDao dao = new AccountDaoImpl();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the account number: ");
+        int inp = sc.nextInt();
+
+        AccountDao dao = new AccountDaoImpl();
 
         /*Account ac = new Account();
         ac.setName("Aman");
         ac.setBalance(100);
        dao.createAccount(ac);
 */
-//        Account account = dao.findAccount(inp);
-//        System.out.println(account.toString());
+        Account account = dao.findAccount(inp);
+        System.out.println(account.toString());
 
       /*  account.setBalance(500);
         dao.updateAccount(account);*/
 
 
 //        dao.deleteAccount(inp);
+
+
 
 
 //        JPQL
@@ -59,11 +61,28 @@ public class Driver {
 
         Query query4 = em.createNamedQuery("find account by id");
         query4.setParameter("number",4);
-        List<Account> list = query4.getResultList();
+
+//        List<Account> list = query4.getResultList();
+//
+//        for (Account l : list) {
+//            System.out.println(l.toString());
+//        }
+
+        List<Object[]> list2 = query4.getResultList();
+        for (Object[] l : list2) {
+            System.out.println(l[0]+" "+l[1]);
+        }
+
+
+
+        Query query5 = em.createNamedQuery("find account by name");
+        query5.setParameter("name","aman");
+
+        List<Account> list = query5.getResultList();
+
         for (Account l : list) {
             System.out.println(l.toString());
         }
-
 
     }
 }
