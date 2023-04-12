@@ -14,6 +14,7 @@ public class Students {
 
     @Embedded
     @ElementCollection(fetch = FetchType.EAGER)
+    @JoinTable(name = "address", joinColumns = @JoinColumn(name = "student_id"))
     private Set<Address> addressSet = new HashSet<>();
 
 //    @Embedded

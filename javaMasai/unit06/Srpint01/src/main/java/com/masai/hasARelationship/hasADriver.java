@@ -23,7 +23,7 @@ public class hasADriver {
 //        students.getAddressSet().add(officeAddress);
 
 
-        /*Address homeAddress = new Address("Hamirpur","UP","210301","home");
+         /*Address homeAddress = new Address("Hamirpur","UP","210301","home");
         Address officeAddress = new Address("Bangalore","KN","530068","office");
 
         students.getAddressSet().add(officeAddress);
@@ -33,8 +33,8 @@ public class hasADriver {
         em.persist(students);
 
         em.getTransaction().commit();
-        em.close();*/
-
+        em.close();
+*/
 
         Students student = em.find(Students.class,1);
         em.close();
@@ -46,6 +46,5 @@ public class hasADriver {
         for(Address a: student.getAddressSet()){
             System.out.println(a);
         }
-
     }
 }
