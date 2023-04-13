@@ -2,7 +2,7 @@ package com.masai.associationmapping.OneToOneBi;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class User {
 
     @Id
@@ -10,7 +10,7 @@ public class User {
     private int userID;
     private String username;
 
-    @OneToOne
+    @OneToOne(mappedBy = "user")
     private Passport passport;
 
     public User(int userID, String username, Passport passport) {

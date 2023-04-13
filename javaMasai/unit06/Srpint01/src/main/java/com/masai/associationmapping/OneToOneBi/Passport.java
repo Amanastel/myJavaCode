@@ -1,17 +1,15 @@
 package com.masai.associationmapping.OneToOneBi;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Passport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int pID;
     private String pNumber;
 
+    @OneToOne(cascade = CascadeType.ALL)
     private User user;
 
 
