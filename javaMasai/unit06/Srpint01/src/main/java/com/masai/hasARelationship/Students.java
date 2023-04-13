@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
+//@Entity
 public class Students {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +14,7 @@ public class Students {
 
     @Embedded
     @ElementCollection(fetch = FetchType.EAGER)
-    @JoinTable(name = "address", joinColumns = @JoinColumn(name = "student_id"))
+    @JoinTable(name = "address", joinColumns = @JoinColumn(name = "student_id"))   // costomise krne ke liye
     private Set<Address> addressSet = new HashSet<>();
 
 //    @Embedded
