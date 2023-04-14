@@ -71,6 +71,7 @@ public class Driver {
         List<Object[]> list2 = query4.getResultList();
         for (Object[] l : list2) {
             System.out.println(l[0]+" "+l[1]);
+            System.out.println(l[0]+" "+l[1]);
         }
 
 
