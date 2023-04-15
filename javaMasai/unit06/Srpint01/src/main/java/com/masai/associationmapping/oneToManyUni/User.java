@@ -3,7 +3,7 @@ package com.masai.associationmapping.oneToManyUni;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
+//@Entity
 public class User {
     @Id
     private int userID;
