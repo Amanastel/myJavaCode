@@ -2,7 +2,7 @@ package com.masai.associationmapping.OneToOneUni;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class EmployeeDetails {
 
     @Id

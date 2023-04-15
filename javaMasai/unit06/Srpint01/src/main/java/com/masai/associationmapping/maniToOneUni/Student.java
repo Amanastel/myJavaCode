@@ -3,7 +3,7 @@ package com.masai.associationmapping.maniToOneUni;
 import javax.persistence.*;
 
 
-@Entity
+//@Entity
 public class Student {
 
     @Id
