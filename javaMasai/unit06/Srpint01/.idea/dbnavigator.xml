@@ -26,8 +26,14 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="89ffd86e-6443-4ac4-8cae-e529048ed9fe" dataset="db2.Account" active-filter-id="" />
+    <filter-actions connection-id="89ffd86e-6443-4ac4-8cae-e529048ed9fe" dataset="db2.STUDENT" active-filter-id="" />
+    <filter-actions connection-id="89ffd86e-6443-4ac4-8cae-e529048ed9fe" dataset="db2.STUDENT_COURSE" active-filter-id="" />
+    <filter-actions connection-id="89ffd86e-6443-4ac4-8cae-e529048ed9fe" dataset="db2.COURSE" active-filter-id="" />
     <filter-actions connection-id="89ffd86e-6443-4ac4-8cae-e529048ed9fe" dataset="MGNREGA.GramPanchayatMember" active-filter-id="" />
+    <filter-actions connection-id="89ffd86e-6443-4ac4-8cae-e529048ed9fe" dataset="db2.Phone" active-filter-id="" />
     <filter-actions connection-id="89ffd86e-6443-4ac4-8cae-e529048ed9fe" dataset="sb201.Player" active-filter-id="" />
+    <filter-actions connection-id="89ffd86e-6443-4ac4-8cae-e529048ed9fe" dataset="db2.Employee" active-filter-id="" />
     <filter-actions connection-id="89ffd86e-6443-4ac4-8cae-e529048ed9fe" dataset="sb201.student" active-filter-id="" />
     <filter-actions connection-id="87f13abc-350d-45dd-8a6e-3cf01729594a" dataset="sb201_01.Department" active-filter-id="" />
   </component>
@@ -130,7 +136,7 @@
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="9999.0" />
+          <database-version value="8.0" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
