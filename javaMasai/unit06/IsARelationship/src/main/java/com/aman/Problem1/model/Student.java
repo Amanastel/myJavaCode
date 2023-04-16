@@ -1,8 +1,8 @@
-package com.java.Problem1.model;
+package com.aman.Problem1.model;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,15 +1,11 @@
-package com.java.Problem1.ui;
+package com.aman.Problem1.ui;
 
-import com.java.Problem1.dao.StudentDao;
-import com.java.Problem1.dao.StudentDaoImpl;
-import com.java.Problem1.model.Collage;
-import com.java.Problem1.model.Student;
-import com.java.Problem1.util.EMUtils;
+import com.aman.Problem1.dao.StudentDao;
+import com.aman.Problem1.dao.StudentDaoImpl;
+import com.aman.Problem1.util.EMUtils;
 
 
 import javax.persistence.EntityManager;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ClientApplication {
     public static void main(String[] args) {

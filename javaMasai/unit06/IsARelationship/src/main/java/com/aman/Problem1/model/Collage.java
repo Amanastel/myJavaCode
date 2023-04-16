@@ -1,10 +1,10 @@
-package com.java.Problem1.model;
+package com.aman.Problem1.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+//@Entity
 public class Collage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,4 +1,4 @@
-package com.java.Problem1.util;
+package com.aman.Problem1.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

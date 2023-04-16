@@ -1,4 +1,4 @@
-package com.java.Problem1.dao;
+package com.aman.Problem1.dao;
 
 public interface StudentDao {
 

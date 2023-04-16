@@ -1,9 +1,9 @@
-package com.java.Problem1.dao;
+package com.aman.Problem1.dao;
 
 
 
-import com.java.Problem1.model.Student;
-import com.java.Problem1.util.EMUtils;
+import com.aman.Problem1.model.Student;
+import com.aman.Problem1.util.EMUtils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
