@@ -16,18 +16,21 @@ public class IsADemo {
         Book book = new Book();
         book.setName("Physics");
         book.setAuthor("C.V.raman");
-        book.setProductID(1);
+        book.setProductID(1L);
 
         Pen pen = new Pen();
         pen.setName("parker");
         pen.setColor("blue");
-        pen.setProductID(2);
+        pen.setProductID(2L);
 
         em.getTransaction().begin();
         em.persist(book);
         em.persist(pen);
         em.getTransaction().commit();
         em.close();
+
+//        Book book2 = em.find(Book.class,1L);
+//        System.out.println(book2.getName()+" "+ book2.getAuthor());
 
 
     }

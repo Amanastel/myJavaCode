@@ -4,7 +4,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("1")
+//@DiscriminatorValue("1") code(001)
 public class Book extends Product{
     private String author;
 
