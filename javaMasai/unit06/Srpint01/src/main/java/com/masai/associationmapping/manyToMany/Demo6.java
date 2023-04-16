@@ -17,7 +17,7 @@ public class Demo6 {
                 Persistence.createEntityManagerFactory("sessionMgr3");
         EntityManager em = entityManagerFactory.createEntityManager();
 
-        Course course = new Course();
+        /*Course course = new Course();
         course.setCname("JAVA");
 
         Course course2 = new Course();
@@ -58,12 +58,12 @@ public class Demo6 {
         em.persist(student);
         em.persist(student2);
         em.persist(student3);
-        em.getTransaction().commit();
+        em.getTransaction().commit();*/
+
+
+        Student s = em.find(Student.class,1);
+        System.out.println(s);
         em.close();
-
-
-
-
 
     }
 }

@@ -2,7 +2,7 @@ package com.masai.curd.account.model;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 @NamedQuery(name = "find account by id", query = "Select e.name, e.balance from Account e where e.accno = :number")
 //@NamedQuery(name = "find account by id",
 //            query = "Select NEW com.masai.curd.account.model.Account(e.name, e.balance) from Account e where e.accno = :number")

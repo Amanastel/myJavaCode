@@ -2,7 +2,7 @@ package com.masai.associationmapping.oneTOManyBi;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

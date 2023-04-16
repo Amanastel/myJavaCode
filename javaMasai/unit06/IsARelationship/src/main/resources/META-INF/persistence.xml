@@ -21,8 +21,7 @@
         <properties>
 <!--            <property name="hibernate.show_sql" value="true" />-->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-<!--            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sb201_01"/>-->
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sprint02"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sb201_01"/>
             <property name="javax.persistence.jdbc.user" value="root" />
             <property name="javax.persistence.jdbc.password" value="aman1234" />
             <property name="hibernate.hbm2ddl.auto" value="create"/>
@@ -38,19 +37,7 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sprint02"/>
             <property name="javax.persistence.jdbc.user" value="root" />
             <property name="javax.persistence.jdbc.password" value="aman1234" />
-                        <property name="hibernate.hbm2ddl.auto" value="create"/>
-            <!--            <property name="hibernate.hbm2ddl.auto" value="update"/>-->
-        </properties>
-    </persistence-unit>
-
-    <persistence-unit name="sessionMgr4">
-        <properties>
-            <!--            <property name="hibernate.show_sql" value="true" />-->
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/new2"/>
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="aman1234" />
-            <!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+<!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
             <!--            <property name="hibernate.hbm2ddl.auto" value="update"/>-->
 
         </properties>

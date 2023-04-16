@@ -37,7 +37,7 @@ public class hasADriver {
 */
 
         Students student = em.find(Students.class,1);
-        em.close();
+//        em.close();
         System.out.println(student.getName());
         System.out.println(student.getMarks());
         System.out.println(student.getSid());
