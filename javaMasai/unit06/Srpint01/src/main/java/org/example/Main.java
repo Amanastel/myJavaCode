@@ -11,9 +11,5 @@ public class Main {
         EntityManagerFactory entityManagerFactory =
                 Persistence.createEntityManagerFactory("sessionMgr3");
         EntityManager em = entityManagerFactory.createEntityManager();
-
-
-
-
     }
 }
