@@ -17,7 +17,7 @@
         <constructor-arg name="numberOFPerson" value="5"/>
     </bean>
 
-   &lt;!&ndash; <bean id="md" class="com.we.MyBusinessClass">
+   &lt;!&ndash; <bean id="md" class="com.masai.MyBusinessClass">
         <property name="age" value="24"/>
         <property name="name" value="Aman"/>
 
@@ -42,7 +42,7 @@
 
 
 
-
+<!--
     <bean id="db" class="com.we.DAOBean" />
 
 
@@ -54,4 +54,32 @@
     <bean id="pb" class="com.we.PresentationBean" >
         <property name="service" ref="sb"/>
     </bean>
+    -->
+
+<!--    same but byName-->
+
+   <!-- <bean id="dao" class="com.we.DAOBean" />
+
+    <bean id="service" class="com.we.ServiceBean" autowire="byName"/>
+
+    <bean id="pb" class="com.we.PresentationBean" autowire="byName"/>
+
+-->
+
+<!--    same but byType-->
+  <!--  <bean id="db" class="com.we.DAOBean" />
+
+    <bean id="sb" class="com.we.ServiceBean" autowire="byType"/>
+
+    <bean id="pb" class="com.we.PresentationBean" autowire="byType" />
+
+-->
+
+    <bean id="d1" class="com.we.Demo" autowire="constructor" />
+
+    <bean id="a5" class="com.we.A"/>
+
+    <bean id="a1" class="com.we.A" />
+
+    <bean id="b5" class="com.we.B" />
 </beans>

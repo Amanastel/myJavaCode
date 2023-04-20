@@ -10,7 +10,6 @@ public class PresentationBean {
 
     public void present() {
         service.calculateInterest();
-
         System.out.println("Pesenting the calculated interesest in PL");
     }
 

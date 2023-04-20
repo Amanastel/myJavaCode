@@ -1,4 +1,4 @@
-package com.we;
+package com.masai;
 
 public class MyBusinessClass {
     private int age;
