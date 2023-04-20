@@ -10,9 +10,11 @@
     <bean id="B" class="com.masai.Bike"/>
 
     <bean id="tr" class="com.masai.Travel">
-        <property name="v" ref="B"/>
-        <property name="numberOFPerson" value="23"/>
+       <!-- <property name="v" ref="B"/>
+        <property name="numberOFPerson" value="23"/>-->   <!--if you use set method then is will call  -->
 
+        <constructor-arg name="v" ref="c"/>
+        <constructor-arg name="numberOFPerson" value="5"/>
     </bean>
 
    <!-- <bean id="md" class="com.masai.MyBusinessClass">
@@ -20,5 +22,8 @@
         <property name="name" value="Aman"/>
 
     </bean>-->
+
+
+
 
 </beans>
