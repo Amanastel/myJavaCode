@@ -17,7 +17,7 @@
         <constructor-arg name="numberOFPerson" value="5"/>
     </bean>
 
-   &lt;!&ndash; <bean id="md" class="com.masai.MyBusinessClass">
+   &lt;!&ndash; <bean id="md" class="com.we.MyBusinessClass">
         <property name="age" value="24"/>
         <property name="name" value="Aman"/>
 
@@ -26,13 +26,32 @@
 
 
 
-    <bean id="aid" class="com.masai.A">
-<!--        <constructor-arg name="b1" ref="bid"/>-->
+   <!-- <bean id="aid" class="com.masai.A">
+&lt;!&ndash;        <constructor-arg name="b1" ref="bid"/>&ndash;&gt;
         <property name="b1" ref="bid"/>
     </bean>
 
     <bean id="bid" class="com.masai.B">
         <constructor-arg name="a1" ref="aid"/>
     </bean>
+-->
 
+
+
+
+
+
+
+
+    <bean id="db" class="com.we.DAOBean" />
+
+
+    <bean id="sb" class="com.we.ServiceBean" >
+        <property name="dao" ref="db"/>
+    </bean>
+
+
+    <bean id="pb" class="com.we.PresentationBean" >
+        <property name="service" ref="sb"/>
+    </bean>
 </beans>

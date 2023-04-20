@@ -1,5 +1,6 @@
 package com.masai;
 
+import com.we.PresentationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -9,7 +10,11 @@ public class Demo {
 //        Travel obj = ctx.getBean("tr", Travel.class);
 //        obj.journey();
 
-        A obj = ctx.getBean("aid", A.class);
-        obj.showA();
+//        A obj = ctx.getBean("aid", A.class);
+//        obj.showA();
+
+
+//        PresentationBean obj = ctx.getBean("pb", PresentationBean.class);
+//        obj.present();
     }
 }
