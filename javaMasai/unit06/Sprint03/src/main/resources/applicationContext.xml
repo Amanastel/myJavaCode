@@ -40,7 +40,7 @@
 
 
 
-
+<!--        we  -->
 
 <!--
     <bean id="db" class="com.we.DAOBean" />
@@ -75,11 +75,123 @@
 
 -->
 
-    <bean id="d1" class="com.we.Demo" autowire="constructor" />
+  <!--  <bean id="d1" class="com.we.Demo" autowire="constructor" />
 
     <bean id="a5" class="com.we.A"/>
 
     <bean id="a1" class="com.we.A" />
 
     <bean id="b5" class="com.we.B" />
+-->
+
+
+
+
+
+<!--    we02-->
+
+<!--
+    <bean id="s1" class="com.we02.Student">
+
+        <constructor-arg name="roll" value="100" />
+        <constructor-arg name="name" value="Ram" />
+        <constructor-arg name="marks" value="780" />
+    </bean>
+
+
+    <bean id="s2" class="com.we02.Student">
+
+        <constructor-arg name="roll" value="101" />
+        <constructor-arg name="name" value="Ramesh" />
+        <constructor-arg name="marks" value="680" />
+    </bean>
+
+    <bean id="s3" class="com.we02.Student">
+
+        <constructor-arg name="roll" value="102" />
+        <constructor-arg name="name" value="Sunil" />
+        <constructor-arg name="marks" value="880" />
+    </bean>
+
+
+    <bean id="cl1" class="com.we02.Collage">
+
+        <constructor-arg name="collageName" value="NIT"/>
+
+        <property name="students">
+
+            <list>
+
+                <ref bean="s1" />
+                <ref bean="s2" />
+                <ref bean="s3" />
+
+            </list>
+
+        </property>
+    </bean>
+
+
+
+
+
+    <bean id="aid" class="com.we02.A">
+        <property name="names">
+
+            <list>
+                <value>Delhi</value>
+                <value>Chennai</value>
+                <value>Kolkata</value>
+                <value>Mumbai</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="aid2" class="com.we02.A2">
+
+        <property name="theSet">
+            <set>
+                <value>Red</value>
+                <value>Blue</value>
+                <value>White</value>
+                <value>Green</value>
+            </set>
+        </property>
+    </bean>
+
+-->
+
+<!--    we03-->
+    <bean id="s1" class="com.we03.Student">
+        <constructor-arg name="roll" value="100"/>
+        <constructor-arg name="name" value="Raj"/>
+        <constructor-arg name="marks" value="700"/>
+    </bean>
+
+    <bean id="s2" class="com.we03.Student">
+        <constructor-arg name="roll" value="102"/>
+        <constructor-arg name="name" value="Simran"/>
+        <constructor-arg name="marks" value="720"/>
+    </bean>
+
+    <bean id="s3" class="com.we03.Student">
+        <constructor-arg name="roll" value="104"/>
+        <constructor-arg name="name" value="Rajesh"/>
+        <constructor-arg name="marks" value="750"/>
+    </bean>
+
+
+    <bean id="aid" class="com.we03.A">
+        <property name="theMap">
+            <map>
+                <entry key-ref="s1" value="NIT"/>
+                <entry key-ref="s2" value="GIET"/>
+                <entry key-ref="s3" value="AMITY"/>
+            </map>
+        </property>
+    </bean>
+
+
+
 </beans>
