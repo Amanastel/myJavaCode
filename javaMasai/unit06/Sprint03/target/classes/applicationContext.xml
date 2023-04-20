@@ -6,5 +6,4 @@
 
     <bean id="md" class="com.masai.MyBusinessClass" />
 
-
 </beans>
