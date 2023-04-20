@@ -4,6 +4,21 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="md" class="com.masai.MyBusinessClass" />
+
+    <bean id="c" class="com.masai.Car"/>
+
+    <bean id="B" class="com.masai.Bike"/>
+
+    <bean id="tr" class="com.masai.Travel">
+        <property name="v" ref="B"/>
+        <property name="numberOFPerson" value="23"/>
+
+    </bean>
+
+   <!-- <bean id="md" class="com.masai.MyBusinessClass">
+        <property name="age" value="24"/>
+        <property name="name" value="Aman"/>
+
+    </bean>-->
 
 </beans>

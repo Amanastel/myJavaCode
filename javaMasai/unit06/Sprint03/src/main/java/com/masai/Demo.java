@@ -6,8 +6,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Demo {
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-        MyBusinessClass obj = ctx.getBean("md",MyBusinessClass.class);
-        obj.fun1();
+        Travel obj = ctx.getBean("tr", Travel.class);
+        obj.journey();
 
     }
 }
