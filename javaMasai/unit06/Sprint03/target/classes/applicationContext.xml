@@ -5,22 +5,34 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="c" class="com.masai.Car"/>
+  <!--  <bean id="c" class="com.masai.Car"/>
 
     <bean id="B" class="com.masai.Bike"/>
 
     <bean id="tr" class="com.masai.Travel">
-       <!-- <property name="v" ref="B"/>
-        <property name="numberOFPerson" value="23"/>-->   <!--if you use set method then is will call  -->
+       &lt;!&ndash; <property name="v" ref="B"/>
+        <property name="numberOFPerson" value="23"/>&ndash;&gt;   &lt;!&ndash;if you use set method then is will call  &ndash;&gt;
 
         <constructor-arg name="v" ref="c"/>
-<!--        <constructor-arg name="numberOFPerson" value="5"/>-->
+        <constructor-arg name="numberOFPerson" value="5"/>
     </bean>
 
-   <!-- <bean id="md" class="com.masai.MyBusinessClass">
+   &lt;!&ndash; <bean id="md" class="com.masai.MyBusinessClass">
         <property name="age" value="24"/>
         <property name="name" value="Aman"/>
 
-    </bean>-->
+    </bean>&ndash;&gt;-->
+
+
+
+
+    <bean id="aid" class="com.masai.A">
+<!--        <constructor-arg name="b1" ref="bid"/>-->
+        <property name="b1" ref="bid"/>
+    </bean>
+
+    <bean id="bid" class="com.masai.B">
+        <constructor-arg name="a1" ref="aid"/>
+    </bean>
 
 </beans>
