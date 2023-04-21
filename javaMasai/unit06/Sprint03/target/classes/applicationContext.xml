@@ -163,6 +163,7 @@
 -->
 
 <!--    we03-->
+
     <bean id="s1" class="com.we03.Student">
         <constructor-arg name="roll" value="100"/>
         <constructor-arg name="name" value="Raj"/>
@@ -191,6 +192,15 @@
             </map>
         </property>
     </bean>
+
+
+
+    <bean id="a1" class="com.we03.A2" init-method="mySetup">
+        <property name="message" value="Welcome to Spring.."/>
+    </bean>
+
+
+
 
 
 
