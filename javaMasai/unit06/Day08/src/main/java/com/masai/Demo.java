@@ -11,5 +11,7 @@ public class Demo {
         A obj = ctx.getBean("a1", A.class);
 
         obj.insertStudentRecord();
+        ClassPathXmlApplicationContext ctx2 = (ClassPathXmlApplicationContext) ctx;
+        ctx2.close();
     }
 }

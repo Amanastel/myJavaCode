@@ -48,6 +48,14 @@ public class A {
     public void insertStudentRecord() throws SQLException {
         conn.prepareStatement("show tables");
         System.out.println("connection obj is ready to insert a record into the table "+ conn);
+    }
 
+    public void tearDown(){
+        try {
+            System.out.println("System are close");
+            conn.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
