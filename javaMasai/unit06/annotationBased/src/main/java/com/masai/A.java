@@ -2,6 +2,7 @@ package com.masai;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -35,7 +36,7 @@ public class A {
     }
 */
 
-    @Value("${roll}")
+    /*@Value("${roll}")
     int roll;
 
     @Value("${name}")
@@ -55,18 +56,20 @@ public class A {
     private String uname;
 
     @Value("${db.password}")
-    private String pass;
+    private String pass;*/
 
+    @Autowired
+    private Environment env;
 
     public void funA() {
         System.out.println("inside funA of A");
-        System.out.println("Roll is "+roll);
-        System.out.println("Name is "+name);
-        System.out.println("Marks is "+marks);
-        System.out.println("Driver name  is "+dname);
-        System.out.println("Connection URL  is "+url);
-        System.out.println("Username  is "+uname);
-        System.out.println("Password  is "+pass);
+        System.out.println("Roll is "+env.getProperty("roll"));
+        System.out.println("Name is "+env.getProperty("name"));
+        System.out.println("Marks is "+env.getProperty("marks"));
+        System.out.println("Driver name  is "+env.getProperty("db.driverName"));
+        System.out.println("Connection URL  is "+env.getProperty("db.url"));
+        System.out.println("Username  is "+env.getProperty("db.username"));
+        System.out.println("Password  is "+env.getProperty("db.password"));
     }
 
 
