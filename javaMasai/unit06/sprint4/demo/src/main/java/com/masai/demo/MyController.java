@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class MyController {
 
@@ -22,4 +25,18 @@ public class MyController {
     }
 
 
+
+    @RequestMapping("/students")
+    @ResponseBody
+    public List<Student> getStudentsHandler(){
+
+        List<Student> students = new ArrayList<>();
+        students.add(new Student(1,"Aman","Kanpur",98));
+        students.add(new Student(2,"Rubel","West Bengal",98));
+        students.add(new Student(3,"priti","Kanpur",98));
+        students.add(new Student(4,"Avishek","Kolkata",98));
+        students.add(new Student(5,"Rahul","Delhi",98));
+
+        return students;
+    }
 }
