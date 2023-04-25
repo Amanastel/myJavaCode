@@ -5,9 +5,13 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.util.List;
 
 @Service(value = "a1")
 public class A {
+
+    @Autowired
+    private List<String> list;
 
 //    @Autowired same like setB1
     private B b1;
@@ -31,6 +35,7 @@ public class A {
     public void funA() {
         System.out.println("inside funA of A");
         System.out.println("B class object :"+ b1);
+        System.out.println(list);
     }
 
 
