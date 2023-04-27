@@ -1,12 +1,16 @@
 package com.masai.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Student {
 
     private Integer Roll;
     private String Name;
     private String Address;
+//    @JsonProperty("studentMarks")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Integer Marks;
-
     public Student() {
     }
 
