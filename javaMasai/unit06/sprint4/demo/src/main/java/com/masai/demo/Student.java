@@ -1,5 +1,7 @@
 package com.masai.demo;
 
+import java.util.Objects;
+
 public class Student {
     private int roll;
     private String name;
@@ -58,5 +60,17 @@ public class Student {
                 ", address='" + address + '\'' +
                 ", marks=" + marks +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student student)) return false;
+        return getRoll() == student.getRoll() && getMarks() == student.getMarks() && Objects.equals(getName(), student.getName()) && Objects.equals(getAddress(), student.getAddress());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getRoll(), getName(), getAddress(), getMarks());
     }
 }
