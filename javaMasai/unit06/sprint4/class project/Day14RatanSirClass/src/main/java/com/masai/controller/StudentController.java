@@ -1,6 +1,7 @@
 package com.masai.controller;
 
 
+import com.masai.exception.InvalidNumberException;
 import com.masai.model.Student;
 import jakarta.annotation.PostConstruct;
 import org.springframework.http.HttpHeaders;
@@ -139,4 +140,17 @@ public class StudentController {
             throw new IllegalArgumentException("Student does not exist with roll :"+roll);
         }
 	}
+
+
+    @GetMapping("/hello/{num}")
+    public String sayHello(@PathVariable Integer num){
+       if(num>100)
+           throw new InvalidNumberException("Number should be less then 100");
+
+       int x = 1000/num;
+       return "welcome to spring boot "+num;
+
+    }
+
+
 }
