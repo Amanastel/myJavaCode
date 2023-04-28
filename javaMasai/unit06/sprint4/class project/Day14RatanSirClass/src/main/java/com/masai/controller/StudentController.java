@@ -40,7 +40,7 @@ public class StudentController {
 
         List<Student> students = new ArrayList<>(collection);
 
-        ResponseEntity<List<Student>> re = new ResponseEntity<>(students, HttpStatus.OK);
+        ResponseEntity<List<Student>> re = new ResponseEntity<>(students, HttpStatus.FOUND);
 
 
         return re;
@@ -130,9 +130,13 @@ public class StudentController {
 
     }
 
-//	@DeleteMapping("/students/{roll}")
-//	public String deleteStudentByRollHandler(@PathVariable Integer roll) {
-//
-//
-//	}
+	@DeleteMapping("/students/{roll}")
+	public String deleteStudentByRollHandler(@PathVariable Integer roll) {
+        if(map.containsKey(roll)) {
+            map.remove(roll);
+            return "Student delete successfully: " + roll;
+        }else {
+            throw new IllegalArgumentException("Student does not exist with roll :"+roll);
+        }
+	}
 }

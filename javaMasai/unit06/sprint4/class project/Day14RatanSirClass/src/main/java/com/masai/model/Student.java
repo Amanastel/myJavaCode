@@ -9,7 +9,8 @@ public class Student {
     private String Name;
     private String Address;
 //    @JsonProperty("studentMarks")
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonIgnore
     private Integer Marks;
     public Student() {
     }
