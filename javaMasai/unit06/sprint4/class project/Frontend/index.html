@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge1</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body onload="f1();">
+    <h1 style="text-align: center" >Employee CRUD Application</h1>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="EmployeeID">Employee ID</label>
+                        <input type="number" name="EmployeeID" id="EmployeeID">
+                    </div>
+                    <div>
+                        <label for="firstName">Employee firstName</label>
+                        <input type="text" name="firstName" id="EfirstName">
+                    </div>
+                    <div>
+                        <label for="lastName">Employee lastName</label>
+                        <input type="text" name="lastName" id="ElastName">
+                    </div>
+                    <div>
+                        <label for="email">email</label>
+                        <input type="text" name="email" id="Eemail">
+                    </div>
+                    <div>
+                        <label for="position">Employee position</label>
+                        <input type="text" name="position" id="Eposition">
+                    </div>
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit" onclick="registerEmployee()">
+                        <input type="submit" value="......." id="eUpdate" onclick="uEmployee()">
+                    </div>
+                    
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <input type="search" placeholder="Enter Employee ID" id="searchID">
+                        <input type="submit" value="Search" id="submitBtn" onclick="searchByID()">
+                        <thead>
+                            <tr>
+                                <th>firstName</th>
+                                <th>lastName</th>
+                                <th>email</th>
+                                <th>position</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employee-table-body">
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script src="./script.js"></script>
+</body>
+</html>
