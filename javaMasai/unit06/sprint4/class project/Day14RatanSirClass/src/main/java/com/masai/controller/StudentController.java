@@ -22,7 +22,6 @@ public class StudentController {
         map.put(12, new Student(12, "Ramesh", "Chennai", 840));
         map.put(13, new Student(13, "Manoj", "Kolkata", 700));
         map.put(14, new Student(14, "Suresh", "Pune", 600));
-
     }
 
     @GetMapping("/students")
