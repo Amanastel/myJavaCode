@@ -1,14 +1,12 @@
 package com.Challenge.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.Objects;
 
 public class Employee {
     private Integer id;
     private String firstName;
     private String lastName;
-//    @JsonIgnore
+    //    @JsonIgnore
     private String email;
     private String position;
 
