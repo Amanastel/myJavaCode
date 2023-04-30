@@ -5,8 +5,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.*;
+import lombok.*;
+import org.hibernate.Hibernate;
+
+import java.util.Objects;
 
 @Entity
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 public class Student {
 
 //    @Min(value = 100, message = "Roll number should be 100")
@@ -26,55 +34,68 @@ public class Student {
     private String address;
     private Integer marks;
 
-    public Student(Integer roll, String name, String address, Integer marks) {
-        this.roll = roll;
-        this.name = name;
-        this.address = address;
-        this.marks = marks;
-    }
+//    public Student(Integer roll, String name, String address, Integer marks) {
+//        this.roll = roll;
+//        this.name = name;
+//        this.address = address;
+//        this.marks = marks;
+//    }
+//
+//    public Student() {
+//    }
+//
+//    public Integer getRoll() {
+//        return roll;
+//    }
+//
+//    public void setRoll(Integer roll) {
+//        this.roll = roll;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public String getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(String address) {
+//        this.address = address;
+//    }
+//
+//    public Integer getMarks() {
+//        return marks;
+//    }
+//
+//    public void setMarks(Integer marks) {
+//        this.marks = marks;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Student{" +
+//                "roll=" + roll +
+//                ", name='" + name + '\'' +
+//                ", address='" + address + '\'' +
+//                ", marks=" + marks +
+//                '}';
+//    }
 
-    public Student() {
-    }
-
-    public Integer getRoll() {
-        return roll;
-    }
-
-    public void setRoll(Integer roll) {
-        this.roll = roll;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Integer getMarks() {
-        return marks;
-    }
-
-    public void setMarks(Integer marks) {
-        this.marks = marks;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Student student = (Student) o;
+        return getRoll() != null && Objects.equals(getRoll(), student.getRoll());
     }
 
     @Override
-    public String toString() {
-        return "Student{" +
-                "roll=" + roll +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", marks=" + marks +
-                '}';
+    public int hashCode() {
+        return getClass().hashCode();
     }
 }
