@@ -1,11 +1,14 @@
 package com.masai.demo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Objects;
 
 public class Student {
     private int roll;
     private String name;
     private String address;
+//    @JsonIgnore
     private int marks;
 
 
