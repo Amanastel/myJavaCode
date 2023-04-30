@@ -2,6 +2,7 @@ package com.masai.service;
 
 import com.masai.exception.StudentException;
 import com.masai.model.Student;
+import com.masai.model.StudentDto;
 import com.masai.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,13 +33,14 @@ public class StudentServiceImpl implements StudentService{
 
         Optional<Student> opt = studentRepository.findById(roll);
 
-        if(opt.isPresent()){
-            Student existingStudent = opt.get();
+//        if(opt.isPresent()){
+//            Student existingStudent = opt.get();
+//
+//            return existingStudent;
+//        }
+//        throw new StudentException("Student not fount with roll "+roll);
 
-            return existingStudent;
-        }
-        throw new StudentException("Student not fount with roll "+roll);
-
+        return opt.orElseThrow(() -> new StudentException("Student not fount with roll "+roll));
     }
 
     @Override
@@ -49,5 +51,45 @@ public class StudentServiceImpl implements StudentService{
         }else {
             return allStudent;
         }
+    }
+
+    @Override
+    public Student deleteByStudentRoll(Integer roll) throws StudentException {
+
+         Student existStudent = studentRepository.findById(roll).orElseThrow(() -> new StudentException("Student does not exist with roll " + roll));
+
+         studentRepository.delete(existStudent);
+
+         return existStudent;
+    }
+
+    @Override
+    public Student updateStudent(Integer roll, StudentDto student) throws StudentException {
+
+        Optional<Student> opt = studentRepository.findById(roll);
+
+        if(opt.isPresent()){
+            Student existingStudent = opt.get();
+            existingStudent.setName(student.getName());
+            existingStudent.setAddress(student.getAddress());
+            existingStudent.setMarks(student.getMarks());
+
+
+            //save() method will work as save Or merge with respect to id filled
+            return studentRepository.save(existingStudent);
+
+
+        }else
+            throw new StudentException("Invalid Student Roll Number"+roll);
+    }
+
+    @Override
+    public Student updateStudentMarks(Integer roll, Integer graceMarks) throws StudentException {
+
+        Student existingStudent = studentRepository.findById(roll).orElseThrow(() -> new StudentException("Invalid Roll Number"));
+
+        existingStudent.setMarks(existingStudent.getMarks()+graceMarks);
+
+        return studentRepository.save(existingStudent);
     }
 }
