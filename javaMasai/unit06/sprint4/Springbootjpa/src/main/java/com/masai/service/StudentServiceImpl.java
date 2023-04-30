@@ -7,6 +7,7 @@ import com.masai.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -91,5 +92,17 @@ public class StudentServiceImpl implements StudentService{
         existingStudent.setMarks(existingStudent.getMarks()+graceMarks);
 
         return studentRepository.save(existingStudent);
+    }
+
+    @Override
+    public List<Student> getStudentByAddress(String address) throws StudentException {
+
+        List<Student> allStudent = studentRepository.findByAddress(address);
+
+        if(allStudent.isEmpty()){
+            throw new StudentException("Student not exist by this address "+ address);
+        }else {
+            return allStudent;
+        }
     }
 }

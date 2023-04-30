@@ -67,4 +67,13 @@ public class StudentController {
         return new ResponseEntity<>(updateStudent,HttpStatus.ACCEPTED);
 
     }
+
+
+    //http://localhost:8080/getStudents?address=delhi
+    @GetMapping("/getStudents")
+    public ResponseEntity<List<Student>> getStudentByAddress(@RequestParam("address") String address){
+
+        List<Student> students = studentService.getStudentByAddress(address);
+        return new ResponseEntity<>(students,HttpStatus.OK);
+    }
 }

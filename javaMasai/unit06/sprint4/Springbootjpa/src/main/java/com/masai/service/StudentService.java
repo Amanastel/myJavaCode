@@ -19,5 +19,6 @@ public interface StudentService {
 
     public Student updateStudentMarks(Integer roll, Integer graceMarks) throws StudentException;
 
+    public List<Student> getStudentByAddress(String address) throws StudentException;
 
 }
