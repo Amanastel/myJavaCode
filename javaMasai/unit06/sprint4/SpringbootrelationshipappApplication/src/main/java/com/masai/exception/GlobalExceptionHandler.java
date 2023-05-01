@@ -24,6 +24,18 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(CourseException.class)
+    public ResponseEntity<MyErrorDetails> courseExceptionHandler(CourseException ae, WebRequest re){
+        MyErrorDetails err = new MyErrorDetails();
+        err.setTimestamp(LocalDateTime.now());
+        err.setMessage(ae.getMessage());
+        err.setDetails(re.getDescription(false));
+
+
+        return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
+    }
+
     //to handel any generic exception
     @ExceptionHandler(Exception.class)
     public ResponseEntity<MyErrorDetails> exceptionHandler2(Exception ae, WebRequest re){
