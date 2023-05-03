@@ -7,20 +7,30 @@ import lombok.Data;
 @Data
 @Entity
 public class Employee {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer empId;
-    private String ename;
-    private String email;
-    private String salary;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer empId;
+	private String ename;
+	private String email;
+	private Integer salary;
+	
+	@Enumerated(EnumType.STRING)
+	private Gender gender;
+	
+	@Embedded
+	private Address address;
+	
+	@JsonIgnore
+	@ManyToOne
+	private Department dept;
+	
+	
+	
+	
+	
+	
+	
+	
 
-    @Enumerated(EnumType.STRING)
-    private Gander gander;
-
-    @Embedded
-    private Address address;
-
-    @JsonIgnore
-    @ManyToOne
-    private Department dept;
 }
