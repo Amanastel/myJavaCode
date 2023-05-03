@@ -59,6 +59,7 @@ public class EmployeeController {
 		List<String> result= empService.getEmployeeCustomDetails(deptId);
 		
 		return new ResponseEntity<>(result,HttpStatus.OK);
+
 	}
 	
 	
