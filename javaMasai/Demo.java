@@ -3,9 +3,10 @@ public class Demo{
 
 		for(int i=1; i<11; i++){
 			System.out.println(i);
+			System.out.println("hekoo");
 		}
 
-		System.out.println("hekoo");
+		
 
 	}
 }
