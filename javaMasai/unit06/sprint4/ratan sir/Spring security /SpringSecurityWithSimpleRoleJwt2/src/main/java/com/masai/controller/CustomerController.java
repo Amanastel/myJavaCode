@@ -54,7 +54,7 @@ public class CustomerController {
 	public ResponseEntity<Customer> getCustomerByEmailHandler(@PathVariable("email") String email){
 		
 		
-		Customer customer= customerService.getCustomerDetailsByEmail(email);
+		Customer customer = customerService.getCustomerDetailsByEmail(email);
 		
 		return new ResponseEntity<>(customer,HttpStatus.ACCEPTED);
 		

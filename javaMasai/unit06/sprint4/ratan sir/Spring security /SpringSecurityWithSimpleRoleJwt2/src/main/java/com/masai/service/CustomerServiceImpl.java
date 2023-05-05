@@ -32,7 +32,7 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public List<Customer> getAllCustomerDetails()throws CustomerException {
 		
-		List<Customer> customers= customerRepository.findAll();
+		List<Customer> customers = customerRepository.findAll();
 		
 		if(customers.isEmpty())
 			throw new CustomerException("No Customer find");
