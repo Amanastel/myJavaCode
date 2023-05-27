@@ -23,15 +23,20 @@ public class EmployeeServiceImpl implements EmployeeService{
 	
 	@Override
 	public Employee addEmployeeInDepartment(Integer deptId, Employee employee) {
+
 		Optional<Department> opt= deptRepo.findById(deptId);
 
 		if(opt.isPresent()) {
+
 			Department dept= opt.get();
 			//associating emp with dept
 			employee.setDept(dept);
 			//associating dept with emp
 			dept.getEmployees().add(employee);
+
 			return empRepo.save(employee);
+
+
 		}else
 			throw new IllegalArgumentException("Invalid Department Details");
 	}
