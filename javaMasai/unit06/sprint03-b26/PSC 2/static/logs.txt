@@ -1,0 +1,35 @@
+2023-05-27T10:31:52.851+05:30  INFO 28216 --- [restartedMain] com.masai.SwiggyApplication              : Starting SwiggyApplication using Java 17.0.4.1 with PID 28216 (C:\Users\mozak\OneDrive\Desktop\Masai Repo\Mo_fw17_0683\Block-26\PSC\target\classes started by mozak in C:\Users\mozak\OneDrive\Desktop\Masai Repo\Mo_fw17_0683\Block-26\PSC)
+2023-05-27T10:31:52.851+05:30  INFO 28216 --- [restartedMain] com.masai.SwiggyApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-05-27T10:31:53.005+05:30  INFO 28216 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-27T10:31:53.017+05:30  INFO 28216 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2023-05-27T10:31:53.080+05:30  INFO 28216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-05-27T10:31:53.080+05:30  INFO 28216 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-27T10:31:53.080+05:30  INFO 28216 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-27T10:31:53.100+05:30  INFO 28216 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-27T10:31:53.100+05:30  INFO 28216 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 247 ms
+2023-05-27T10:31:53.132+05:30  INFO 28216 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-27T10:31:53.139+05:30  INFO 28216 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-05-27T10:31:53.139+05:30  INFO 28216 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-05-27T10:31:53.140+05:30  INFO 28216 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-05-27T10:31:53.152+05:30  INFO 28216 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d8d514e
+2023-05-27T10:31:53.153+05:30  INFO 28216 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-05-27T10:31:53.154+05:30  INFO 28216 --- [restartedMain] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.31
+2023-05-27T10:31:53.169+05:30  INFO 28216 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-05-27T10:31:53.212+05:30  INFO 28216 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-27T10:31:53.277+05:30  INFO 28216 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-27T10:31:53.349+05:30  WARN 28216 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-27T10:31:53.606+05:30  INFO 28216 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-27T10:31:53.621+05:30  INFO 28216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-05-27T10:31:53.626+05:30  INFO 28216 --- [restartedMain] com.masai.SwiggyApplication              : Started SwiggyApplication in 0.798 seconds (process running for 655.716)
+2023-05-27T10:31:53.627+05:30  INFO 28216 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-27T10:32:01.687+05:30  INFO 28216 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-27T10:32:01.689+05:30  INFO 28216 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-27T10:32:01.690+05:30  INFO 28216 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-05-27T10:32:02.043+05:30  INFO 28216 --- [http-nio-8888-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 84 ms
+2023-05-27T10:32:08.145+05:30  INFO 28216 --- [http-nio-8888-exec-5] com.masai.service.DeliveryService        : Sorting the element
+2023-05-27T10:33:27.483+05:30  INFO 28216 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-27T10:33:27.490+05:30  INFO 28216 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-27T10:33:27.491+05:30  INFO 28216 --- [Thread-23] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-27T10:33:27.493+05:30  INFO 28216 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-27T10:33:27.494+05:30  INFO 28216 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-05-27T10:33:27.498+05:30  INFO 28216 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
