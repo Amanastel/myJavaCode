@@ -1,11 +1,13 @@
 package com.lcwd.user.service.Service.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
+@Data
 @Table(name = "micro_users")
 public class User {
 
@@ -19,7 +21,8 @@ public class User {
     @Column(name = "ABOUT")
     private String about;
 
-
+    @Transient
+    private List<Rating> ratings = new ArrayList<>();
 
 
 }
