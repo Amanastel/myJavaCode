@@ -15,8 +15,7 @@ public class Department {
 	private Integer deptId;
 	private String dname;
 	private String location;
-	
-	//20
+
 	
 
 	@OneToMany(mappedBy = "dept", cascade = CascadeType.ALL)

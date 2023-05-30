@@ -18,6 +18,8 @@ public interface DepartmentRepository extends JpaRepository<Department, Integer>
 	
 	@Query("select e.ename,e.email,e.salary,d.dname,d.location from Employee e INNER JOIN Department d ON d.deptId=e.dept.deptId AND d.deptId = ?1")
 	public List<String> getDeptEmpDetails(Integer deptId);
+
+
 	
 	
 }
