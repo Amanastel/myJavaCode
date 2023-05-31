@@ -2,10 +2,12 @@ server:
   port: 8081
 
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+
+
 
 spring:
   application:
@@ -15,6 +17,10 @@ spring:
     username: root
     password: aman1234
     driver-class-name: com.mysql.cj.jdbc.Driver
+  config:
+    import: configserver:http://localhost:8085
+#  profiles:
+#    active: dev
 
   jpa:
     hibernate:
@@ -23,3 +29,4 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+
