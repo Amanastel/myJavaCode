@@ -33,6 +33,11 @@ public class hotelServiceImpl implements hotelService {
     public List<Hotel> getAllHotels() {
         return hotelRepository.findAll();
     }
+
+    @Override
+    public Hotel deleteHotelById(String hotelId) {
+        return hotelRepository.findById(hotelId).orElseThrow( () -> new NotFoundException("Hotel not found with id: " + hotelId + ""));
+    }
 }
 
 

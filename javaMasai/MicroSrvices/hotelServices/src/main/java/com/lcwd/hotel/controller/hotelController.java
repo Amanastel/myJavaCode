@@ -29,4 +29,9 @@ public class hotelController {
     public ResponseEntity<List<Hotel>> getAllHotels() {
         return ResponseEntity.ok(hotelService.getAllHotels());
     }
+
+    @DeleteMapping("/{hotelId}")
+    public ResponseEntity<Hotel> deleteHotelById(@PathVariable String hotelId) {
+        return ResponseEntity.ok(hotelService.deleteHotelById(hotelId));
+    }
 }
