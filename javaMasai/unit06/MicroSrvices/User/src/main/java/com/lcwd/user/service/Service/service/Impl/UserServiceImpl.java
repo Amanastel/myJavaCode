@@ -1,20 +1,25 @@
 package com.lcwd.user.service.Service.service.Impl;
 
+import com.lcwd.user.service.Service.entities.Hotel;
 import com.lcwd.user.service.Service.entities.Rating;
 import com.lcwd.user.service.Service.entities.User;
 import com.lcwd.user.service.Service.exception.NotFoundException;
+import com.lcwd.user.service.Service.external.service.HotelService;
 import com.lcwd.user.service.Service.repository.UserRepository;
 import com.lcwd.user.service.Service.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -26,6 +31,8 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private HotelService hotelService;
 
     private Logger logger =  LoggerFactory.getLogger(UserServiceImpl.class);
 
@@ -40,7 +47,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> getAllUsers() {
-        ArrayList<Rating> forObj =  restTemplate.getForObject("http://localhost:8083/ratings/all", ArrayList.class);
+        ArrayList<Rating> forObj =  restTemplate.getForObject("http://RATING-SERVICE/ratings/all", ArrayList.class);
 
         logger.info(" {} ", forObj);
 //        List<User> users = userRepository.findAll();
@@ -61,15 +68,30 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserById(String userId) {
 
-//        http://localhost:8083/ratings/user/0619709d-c854-425c-a8de-2db02b2a7c1a
+//       // http://localhost:8083/ratings/user/0619709d-c854-425c-a8de-2db02b2a7c1a
        User u = userRepository.findById(userId).orElseThrow( () -> new NotFoundException("User not found with id: " + userId));
 
-       ArrayList<Rating> forObj =  restTemplate.getForObject("http://localhost:8083/ratings/user/"+u.getUserId(), ArrayList.class);
-
+        Rating[] forObj =  restTemplate.getForObject("http://RATING-SERVICE/ratings/user/"+u.getUserId(), Rating[].class);
         logger.info(" {} ", forObj);
         System.out.println(forObj);
 
-        u.setRatings(forObj);
+        List<Rating> ratings = Arrays.stream(forObj).toList();
+
+
+        List<Rating> ratingList = ratings.stream().map(rating -> {
+//            //http://localhost:8082/hotels/f287f4d1-dd91-4bd6-9f36-a98baacb0ca3
+//            ResponseEntity<Hotel> forE = restTemplate.getForEntity("http://HOTELS-SERVICE/hotels/"+rating.getHotelId(), Hotel.class);
+
+            Hotel hotels = hotelService.getHotel(rating.getHotelId());
+//            log.info("{} response status code: ", forE.getStatusCode());
+//            Hotel hotel = forE.getBody();
+            rating.setHotel(hotels);
+
+            return rating;
+        }).collect(Collectors.toList());
+
+
+        u.setRatings(ratingList);
         return u;
 
 
