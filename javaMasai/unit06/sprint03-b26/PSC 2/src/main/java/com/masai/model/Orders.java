@@ -37,4 +37,6 @@ public class Orders {
 	private Restaurant restaurant ;
 	@ManyToOne
 	private DeliveryPartner deliveryPartner ;
+
+
 }

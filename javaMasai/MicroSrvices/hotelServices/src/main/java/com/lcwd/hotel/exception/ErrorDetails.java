@@ -1,4 +1,4 @@
-package com.lcwd.user.service.Service.exception;
+package com.lcwd.hotel.exception;
 
 import lombok.Data;
 
