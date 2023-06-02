@@ -71,3 +71,9 @@ resilience4j:
         limitRefreshPeriod: 4s
         limitForPeriod: 2
         timeoutDuration: 2s
+
+      userRateLimiterAllData:
+        limitRefreshPeriod: 4s
+        limitForPeriod: 2
+        timeoutDuration: 3s
+

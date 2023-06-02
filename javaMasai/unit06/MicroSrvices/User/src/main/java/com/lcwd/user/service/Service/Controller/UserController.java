@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -47,7 +48,6 @@ public class UserController {
 
     public ResponseEntity<User> ratingHotelFallback(String userId, Exception ex){
 //        log.info("Fallback is executed because services is down : ", ex.getMessage());
-
         User user = new User();
         user.setEmail("dummy@mail.com");
         user.setName("dummy user");
@@ -58,9 +58,22 @@ public class UserController {
 
 
     @GetMapping("/all")
+    @RateLimiter(name = "userRateLimiterAllData", fallbackMethod = "ratingHotelFallbackAll")
     public ResponseEntity<List<User>> getAllUsersHandler(){
         List<User> users = userService.getAllUsers();
         return new ResponseEntity<>(users, HttpStatus.CREATED);
     }
 
+    public ResponseEntity<List<User>> ratingHotelFallbackAll(){
+        log.info("Fallback is executed because services is down {}: ",retryCount);
+        retryCount++;
+        List<User> userList = new ArrayList<>();
+        User user = new User();
+        user.setEmail("dummy@mail.com");
+        user.setName("dummy user");
+        user.setUserId("dummy rating");
+        user.setAbout("this user create dummy because some service is down :");
+        userList.add(user);
+        return new ResponseEntity<>(userList,HttpStatus.BAD_REQUEST);
+    }
 }
