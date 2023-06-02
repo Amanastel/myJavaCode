@@ -64,7 +64,7 @@ public class UserController {
         return new ResponseEntity<>(users, HttpStatus.CREATED);
     }
 
-    public ResponseEntity<List<User>> ratingHotelFallbackAll(){
+    public ResponseEntity<List<User>> ratingHotelFallbackAll(Exception ex){
         log.info("Fallback is executed because services is down {}: ",retryCount);
         retryCount++;
         List<User> userList = new ArrayList<>();
