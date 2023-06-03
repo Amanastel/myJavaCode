@@ -30,6 +30,7 @@ eureka:
 
 #okta configuration for api gateway
 
+
 okta:
   oauth2:
     issuer: https://dev-77620906.okta.com/oauth2/default
