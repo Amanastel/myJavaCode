@@ -1,12 +1,13 @@
 package com.masai.service;
 
-import com.masai.model.Customer;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import com.masai.model.Customer;
 
 public class CustomerUserDetails implements UserDetails{
 	
@@ -36,11 +37,11 @@ public class CustomerUserDetails implements UserDetails{
 		return authorities;
 	}
 
-    @Override
-    public String getPassword() {
-
-        return customer.getPassword();
-    }
+	@Override
+	public String getPassword() {
+		
+		return customer.getPassword();
+	}
 
 	@Override
 	public String getUsername() {
