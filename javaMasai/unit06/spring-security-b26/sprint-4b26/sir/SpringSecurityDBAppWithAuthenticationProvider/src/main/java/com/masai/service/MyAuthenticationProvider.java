@@ -39,7 +39,7 @@ public class MyAuthenticationProvider implements AuthenticationProvider{
 		Optional<Customer> opt = customerRepository.findByEmail(username);
 
 		if (opt.isEmpty())
-			throw new BadCredentialsException("No User registerd with this details");
+			throw new BadCredentialsException("No User registered with this details");
 		else {
 
 				Customer customer= opt.get();
