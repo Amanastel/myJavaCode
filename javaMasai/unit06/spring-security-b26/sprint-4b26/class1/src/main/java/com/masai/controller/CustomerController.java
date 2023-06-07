@@ -38,37 +38,37 @@ public class CustomerController {
 		
 	}
 	
-//	@GetMapping("/customers/{email}")
-//	public ResponseEntity<Customer> getCustomerByEmailHandler(@PathVariable("email") String email){
-//
-//
-//		Customer customer= customerService.getCustomerDetailsByEmail(email);
-//
-//		return new ResponseEntity<>(customer,HttpStatus.OK);
-//
-//	}
+	@GetMapping("/customers/{email}")
+	public ResponseEntity<Customer> getCustomerByEmailHandler(@PathVariable("email") String email){
+
+
+		Customer customer= customerService.getCustomerDetailsByEmail(email);
+
+		return new ResponseEntity<>(customer,HttpStatus.OK);
+
+	}
 	
-//	@GetMapping("/customers")
-//	public ResponseEntity<List<Customer>> getAllCustomerHandler(){
-//
-//
-//		List<Customer> customers= customerService.getAllCustomerDetails();
-//
-//		return new ResponseEntity<>(customers,HttpStatus.ACCEPTED);
-//
-//	}
+	@GetMapping("/customers")
+	public ResponseEntity<List<Customer>> getAllCustomerHandler(){
+
+
+		List<Customer> customers= customerService.getAllCustomerDetails();
+
+		return new ResponseEntity<>(customers,HttpStatus.ACCEPTED);
+
+	}
 	
-//	@GetMapping("/signIn")
-//	public ResponseEntity<String> getLoggedInCustomerDetailsHandler(Authentication auth){
-//
-//		System.out.println(auth); // this Authentication object having Principle object details
-//
-//
-//
-//		 Customer customer= customerService.getCustomerDetailsByEmail(auth.getName());
-//
-//		 return new ResponseEntity<>(customer.getName()+"Logged In Successfully", HttpStatus.ACCEPTED);
-//	}
+	@GetMapping("/signIn")
+	public ResponseEntity<String> getLoggedInCustomerDetailsHandler(Authentication auth){
+
+		System.out.println(auth); // this Authentication object having Principle object details
+
+
+
+		 Customer customer= customerService.getCustomerDetailsByEmail(auth.getName());
+
+		 return new ResponseEntity<>(customer.getName()+"Logged In Successfully", HttpStatus.ACCEPTED);
+	}
 
 	
 	
