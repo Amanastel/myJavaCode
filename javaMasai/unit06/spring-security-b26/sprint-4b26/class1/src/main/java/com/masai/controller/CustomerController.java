@@ -2,6 +2,7 @@ package com.masai.controller;
 
 import com.masai.model.Customer;
 import com.masai.service.CustomerService;
+import com.masai.service.CustomerUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

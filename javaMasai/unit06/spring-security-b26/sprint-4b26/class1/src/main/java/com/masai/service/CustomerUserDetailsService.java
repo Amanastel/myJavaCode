@@ -5,6 +5,7 @@ import com.masai.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -38,7 +39,7 @@ public class CustomerUserDetailsService implements UserDetailsService{
 			//authorities.add(new SimpleGrantedAuthority(customer.getRole()));
 			
 			
-			//return new User(customer.getEmail(), customer.getPassword(), authorities);
+//			return new User(customer.getEmail(), customer.getPassword(), authorities);
 			
 			return new CustomerUserDetails(customer);
 			

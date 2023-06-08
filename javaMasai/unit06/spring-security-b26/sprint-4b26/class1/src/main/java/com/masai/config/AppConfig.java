@@ -17,31 +17,20 @@ public class AppConfig {
 	public SecurityFilterChain springSecurityConfiguration(HttpSecurity http) throws Exception {
 
 		
-//		http.authorizeHttpRequests(auth ->{
-//
-//			auth.requestMatchers(HttpMethod.POST, "/customers").permitAll()
-//			.requestMatchers("/swagger-ui*/**","/v3/api-docs/**").permitAll()
-//			.anyRequest().authenticated();
-//		})
-//		.csrf(csrf -> csrf.disable())
-//		.formLogin(Customizer.withDefaults())
-//		.httpBasic(Customizer.withDefaults());
-//
-//
-//		return http.build();
+		http.authorizeHttpRequests(auth ->{
 
-        http.authorizeHttpRequests(auth ->{
-
-                    auth.requestMatchers("admin","user","/welcomeP").permitAll()
-                            .requestMatchers("/swagger-ui*/**","/v3/api-docs/**").permitAll()
-                            .anyRequest().authenticated();
-                })
-                .csrf(AbstractHttpConfigurer::disable)
-                .formLogin(Customizer.withDefaults())
-                .httpBasic(Customizer.withDefaults());
+			auth.requestMatchers(HttpMethod.POST, "/customers").permitAll()
+			.requestMatchers("/swagger-ui*/**","/v3/api-docs/**").permitAll()
+			.anyRequest().authenticated();
+		})
+		.csrf(csrf -> csrf.disable())
+		.formLogin(Customizer.withDefaults())
+		.httpBasic(Customizer.withDefaults());
 
 
-        return http.build();
+		return http.build();
+
+
 
 	}
 

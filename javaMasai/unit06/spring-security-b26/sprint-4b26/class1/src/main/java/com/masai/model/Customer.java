@@ -7,8 +7,6 @@ import lombok.Data;
 @Entity
 @Data
 public class Customer {
-
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer custId;
