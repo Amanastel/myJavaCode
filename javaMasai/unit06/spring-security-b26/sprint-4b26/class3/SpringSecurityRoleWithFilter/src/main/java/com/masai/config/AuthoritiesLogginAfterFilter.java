@@ -30,7 +30,7 @@ public class AuthoritiesLogginAfterFilter implements Filter{
 		
 		if(auth != null) {
 			
-			log.info("User "+auth.getName()+" is successfully authenticated and has Authorties "+ auth.getAuthorities().toString());
+			log.info("User "+auth.getName()+" is successfully authenticated and has Authorities "+ auth.getAuthorities().toString());
 		}
 		
 		chain.doFilter(request, response);
