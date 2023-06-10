@@ -18,6 +18,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 
 import jakarta.servlet.http.HttpServletRequest;
 
+
 @Configuration
 public class AppConfig {
 	
