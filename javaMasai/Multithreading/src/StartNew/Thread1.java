@@ -10,4 +10,11 @@ public class Thread1 extends Thread{
         }
 
     }
+
+}
+
+class Main extends Thread {
+    public void run() {
+        System.out.println("Inside run method");
+    }
 }
